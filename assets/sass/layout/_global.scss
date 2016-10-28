@@ -1,0 +1,141 @@
+//INVOICE
+header {
+    padding: 0 3.5%;
+    color: $font-color-light;
+    background-color: $header-color;
+}
+
+//components
+h2 {
+    text-transform: uppercase;
+    padding-top: 0;
+}
+
+p {
+    padding: 6px 10px;
+    margin: 1rem 0;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    @media (max-width: #{$tablet-portrait}) {
+        padding: 0.75em 1em;
+    }
+    border-radius: 2px;
+    &:focus {
+        outline: none;
+    }
+    &.btn-primary {
+        background-color: $btn-primary;
+        color: $font-color-light;
+        @include transition (background-color, 0.25s, ease);
+        &:hover {
+            background-color: darken($btn-primary, 10%);
+        }
+    }
+}
+
+//sections
+.invoice-builder {
+    border: 1px solid $border-color;
+    background-color: $background-color-lightest;
+    padding: $global-section-spacing;
+    border-radius: 5px;
+}
+
+.invoice-logo {
+    width: auto;
+    max-width: 173px;
+    @media (max-width: #{$tablet-portrait}) {
+        max-width: 80%;
+    }
+    height: 73px;
+    background-color: #F5F5F5;
+    border: 1px solid $border-color;
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    span {
+        margin: auto;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        color: #666666;
+        font-size: 0.875rem;
+    }
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.invoice-items-header {
+    background-color: $invoice-header-bg;
+    border-radius: 2px;
+    p {
+        margin: 0;
+        color: $font-color-light;
+        font-weight: normal;
+    }
+}
+
+.invoice-items-container {
+    overflow: hidden;
+    p {
+        width: 90%;
+        color: $font-color-md;
+        margin-bottom: 0;
+    }
+    input {
+        margin-left: 6px;
+        margin-bottom: 0;
+    }
+}
+
+.form-group {
+    position: relative;
+}
+
+.invoice-total {
+    > * {
+        border-top: 1px solid $border-color;
+    }
+}
+
+.invoice-add,
+.invoice-totals-container {
+    padding-top: 2rem;
+}
+
+//SIDEBAR
+.invoice-sidebar {
+    padding: 25% $global-section-spacing;
+    @media (max-width: #{$tablet-portrait}) {
+        padding: 15% $global-section-spacing;
+
+        .btn {
+            display: block;
+            width: 100%
+        }
+    }
+    .form-group {
+        border-bottom: 2px solid $border-color;
+    }
+
+    select {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,32 @@
+//images
+$assetPath : "/assets/images";
+
+//screen sizes
+$large-desktop:             2000px;
+$large-med-desktop:         1600px;
+$medium-desktop:			1366px;
+$med-sm-desktop:			1280px;
+$desktop-minimum:			1025px;
+$small-desktop:				1024px;
+$smaller-desktop:			860px;
+$desktop:                   769px;   
+$tablet-portrait:			768px;
+$fablet:					580px; 
+$phone-large:               414px;
+$phone-portrait:			320px;
+
+
+$max-width:   	$large-desktop;
+$min-width:    	$phone-portrait;
+
+$max-content-width: 	1920px;
+$min-content-width: 	1286px; //1366 screen
+
+//website elements
+$nav-parent-height:         0;
+$nav-main-height:           72px;
+
+//padding/margin
+$product-tiles-spacing: 	1.75%;
+$global-section-spacing: 	3.5%; //70px at 2000px screens
+

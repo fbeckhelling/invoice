@@ -1,0 +1,62 @@
+$calendar-font-size: 0.75rem;
+
+//CALENDAR
+
+.hasDatepicker {
+    position: relative;
+    cursor: pointer;
+    @media (max-width: #{$tablet-portrait}) {
+        width: 100%;
+    }
+    background: url('../images/calendar.gif');
+    background-repeat: no-repeat;
+    background-position: center right 5px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-size: $calendar-font-size;
+    color: $calendar-font-color;
+    font-weight: normal;
+}
+
+.ui-widget-header {
+    background-color: transparent;
+    border: none;
+}
+
+.ui-datepicker th {
+    font-weight: normal;
+    color: $calendar-font-color;
+    font-size: $calendar-font-size;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-size: $calendar-font-size;
+    padding: 0.5em;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    background-color: $calendar-font-active;
+    border: none;
+    border-radius: 50%;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    color: $calendar-font-color;
+}
+//CALENDAR end

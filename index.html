@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Billing Invoice Prototype. Author: fbeckhelling@gmail.com-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="Francesca Beckhelling Invoice Prototype" />
+    <meta name="author" content="Francesca Beckhelling" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Invoice Builder | Francesca Beckhelling</title>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Invoice Builder</h1>
+        </header>
+        <div id="main-container" class="body-content">
+            <div id="main-content" role="main">
+                <section class="invoice-container">
+                    <div class="row">
+                        <div class="grid-80 grid-xs-100">
+                            <div class="invoice-builder">
+                                <div class="row">
+                                    <div class="grid-80 grid-sm-70 grid-xs-50">
+                                        <div class="invoice-logo">
+                                            <span>&plus; Add Your Logo</span>
+                                            <a href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="grid-20 grid-sm-30 grid-xs-50">
+                                        <h2>Invoice</h2>
+                                        <div class="form-group">
+                                            <label class="sr-only block" for="invoice-number">Invoice Number:</label>
+                                            <input type="text" class="form-control" id="invoice-number" placeholder="Invoice Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row reverse">
+                                    <div class="grid-80 grid-sm-70 grid-xs-100">
+                                        <div class="form-group">
+                                            <label class="block" for="invoice-recipient">Bill To</label>
+                                            <textarea type="text" class="form-control input-sm input-lg-mobile" id="invoice-recipient input" placeholder="Who is this invoice to?"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="grid-20 grid-sm-30 grid-xs-100">
+                                        <div class="form-group">
+                                            <label>Due Date</label>
+                                            <input type="text" id="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--INVOICE LINE ITEMS TOTAL-->
+                                <div class="row invoice-items-header">
+                                    <div class="grid-40 grid-xs-30">
+                                        <p>Item</p>
+                                    </div>
+                                    <div class="grid-20 grid-xs-25">
+                                        <p>Quantity</p>
+                                    </div>
+                                    <div class="grid-20 grid-xs-25">
+                                        <p>Price</p>
+                                    </div>
+                                    <div class="grid-20">
+                                        <p class="text-center">Total</p>
+                                    </div>
+                                </div>
+                                <!--INVOICE LINE ITEMS-->
+                                <div class="invoice-items-container">
+                                    <div class="row">
+                                        <div class="grid-40 grid-xs-30">
+                                            <input type="text" class="form-control input-lg" placeholder="Who is this invoice to?">
+                                        </div>
+                                        <div class="grid-20 grid-xs-25">
+                                            <input type="number" class="form-control input-lg" placeholder="">
+                                        </div>
+                                        <div class="grid-20 grid-xs-25">
+                                            <input type="number" class="form-control input-lg" placeholder="">
+                                        </div>
+                                        <div class="grid-20">
+                                            <p class="text-center">$0</p>
+                                        </div>
+                                    </div>
+                                    <!--MORE-->
+                                    <div id="invoice-items-additional">
+                                    </div>
+                                    <!--ADD-->
+                                    <div class="row invoice-add">
+                                        <div class="grid-40">
+                                            <button type="button" class="btn btn-primary">&plus; Line Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--INVOICE SUBTOTALS/TOTAL-->
+                                <div class="invoice-totals-container">
+                                    <div class="row">
+                                        <div class="offset-grid-60 offset-grid-xs-33 grid-20 grid-xs-33">
+                                            <p>Subtotal</p>
+                                        </div>
+                                        <div class="grid-20 grid-xs-33">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control minimal input-lg text-center" id="invoice-subtotal" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="offset-grid-60 offset-grid-xs-33 grid-20 grid-xs-33">
+                                            <p>Tax (5%) </p>
+                                        </div>
+                                        <div class="grid-20 grid-xs-33">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control minimal input-lg text-center" id="invoice-tax" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row invoice-total">
+                                        <div class="offset-grid-60 offset-grid-xs-33 grid-20 grid-xs-33">
+                                            <p>Grand Total</p>
+                                        </div>
+                                        <div class="grid-20 grid-xs-33">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control minimal input-lg text-center" id="invoice-grandtotal" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--NOTES-->
+                                <div class="row notes">
+                                    <div class="grid-100">
+                                        <div class="form-group">
+                                            <label for="invoice-notes">Notes</label>
+                                            <textarea type="text" class="form-control block grid-100 " id="invoice-notes" placeholder="Notes - any relevant information not covered"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-20 grid-xs-100">
+                            <div class="invoice-sidebar text-center">
+                                <button class="btn btn-primary">Send Invoice</button>
+                                <div class="form-group">
+                                    <label for="currency">Currency:</label>
+                                    <select class="form-control minimal" id="currency">
+                                        <option>USD</option>
+                                        <option>CAD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.1.1.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $(".invoice-builder button").on("click", function() {
+            var invoiceRow = '<div class="row"><div class="grid-40 grid-xs-30"><input type="text" class="form-control input-lg" placeholder="Who is this invoice to?"></div><div class="grid-20 grid-xs-25"><input type="number" class="form-control input-lg" placeholder=""></div><div class="grid-20 grid-xs-25"><input type="number" class="form-control input-lg" placeholder=""></div><div class="grid-20"><p class="text-center">$0</p></div></div>';
+            $("#invoice-items-additional").append(invoiceRow);
+        });
+    });
+    $(function() {
+        $("#datepicker").datepicker({
+            showOtherMonths: true,
+            changeYear: true,
+            dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        });
+    });
+    </script>
+</body>
+
+</html>

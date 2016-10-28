@@ -1,0 +1,49 @@
+
+//CALENDAR
+.ui-datepicker .ui-datepicker-title {
+    font-size: 0.75rem;
+    color: $calendar-font-color;
+    font-weight: normal;
+}
+
+.ui-widget-header {
+    background-color: transparent;
+    border: none;
+}
+
+.ui-datepicker th {
+    font-weight: normal;
+    color: $calendar-font-color;
+    font-size: 0.75rem;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.5em;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    background-color: $calendar-font-active;
+    border: none;
+    border-radius: 50%;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    color: $calendar-font-color;
+}
+//CALENDAR end

@@ -1,0 +1,115 @@
+//FORMS GLOBAL
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    height: 30px;
+    padding: 6px 10px;
+    margin: 1rem 0;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: $font-family-sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+    @include transition(border, 0.25s, ease);
+    //style variations
+    &.error {
+        border: 1px solid #E7211E;
+    }
+    &.minimal {
+        border: 1px solid transparent;
+    }
+    //formatting
+    &.block {
+        display: block;
+        width: 100%;
+    }
+    //size variations
+    &.input-lg {
+        width: 90%;
+    }
+    &.input-sm {
+        width: 45%;
+    }
+    @media (max-width: #{$tablet-portrait}) {
+        &.input-lg-mobile {
+            width: 100%;
+        }
+    }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    resize: vertical;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid $forms-primary;
+    outline: 0;
+}
+
+select {
+    &.minimal {
+        background-color: transparent;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+}
+
+//custom styles
+label {
+    font-size: 0.875rem;
+    font-family: $font-family-sans-serif;
+}

@@ -1,0 +1,111 @@
+//BREAKPOINTS FOR TYPE SASS MAP
+$breakpoints: (
+  large : $large-desktop,
+  large-med: $large-med-desktop,
+  medium: $medium-desktop,
+  med-sm: $med-sm-desktop,
+  desktop-min: $desktop-minimum,
+  small : $small-desktop,
+  smaller : $smaller-desktop,
+  desktop: $desktop,
+  tablet: $tablet-portrait,
+  fablet: $fablet,
+  phone-large:  $phone-large,
+  phone-portrait: $phone-portrait
+); 
+
+//GLOBAL H1 FONT SIZE MAP
+ $h1-font-sizes: (
+   null  : 1.5,
+   tablet: 1.25
+ );
+
+$h2-font-sizes: (
+  null: 1.85
+);
+
+
+$font-family-sans-serif:  Arial, sans-serif;
+//$font-family-sans-serif-alt:  'Oleo Script', Helvetica, Arial, sans-serif;
+
+$font-weight-light:       100;
+$font-weight-normal:		  300;
+$font-weight-medium:		  500;
+$font-weight-semi:        600;
+$font-weight-bold:			  700;
+
+//Base Styles	
+
+body { 
+  font-family: $font-family-sans-serif;
+	font-weight: $font-weight-normal;
+	font-size: 	1rem; 
+	color: $font-color-dark;
+}
+
+//Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  margin: 0;
+  font-weight: $font-weight-normal; 
+}
+
+
+h1, h2, h3 {
+  font-size: 2.9175rem; //42px
+  font-weight: 400;
+  padding: 0.5em 0;
+}
+
+h1 {
+  //font-family: $font-family-sans-serif-alt;
+  @include font-size($h1-font-sizes);
+}
+
+h2 {
+  @include font-size($h2-font-sizes);
+}
+
+p {
+  line-height: 1.35;
+  font-size: 0.875rem;
+  letter-spacing: 0.05rem;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+//Links
+a {
+  color: $font-color-dark; 
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: $link-color-hover; 
+}
+
+//screen reader only
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+//helpers
+.text-center {
+    text-align: center;
+}
+
+.block {
+    display: block;
+}
